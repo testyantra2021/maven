@@ -1,5 +1,5 @@
 
-#Edited on Feature branch
+//#Edited on Feature branch
 node('master') 
 {
   stage('Continuous Download') 
@@ -34,9 +34,18 @@ node('master')
     {
          sh label: '', script: 'mvn test'
     }  
+      stage('Continuous Verify') 
+    {
+         sh label: '', script: 'mvn verify'
+    }
+      stage('Continuous Install') 
+    {
+         sh label: '', script: 'mvn install'
+    }
   
-  
-  
-  
+      stage('Continuous Site') 
+    {
+         sh label: '', script: 'mvn site'
+    }
   
 }
