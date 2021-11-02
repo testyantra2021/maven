@@ -43,9 +43,9 @@ node('master')
          sh label: '', script: 'mvn install'
     }
   
-      stage('Continuous Site') 
+     /* stage('Continuous Site') 
     {
          sh label: '', script: 'mvn site'
-    }
+    }*/
   
 }
